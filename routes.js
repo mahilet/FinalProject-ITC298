@@ -17,15 +17,14 @@ module.exports = [
 {
   method:"GET",
   path: "/bios/bio/{index}",
-  handler:require("./handlers/bio")
+  handler:require("./handlers/bios")
 },
 
 {
     method: "GET",
     path:"/createpost",
-    handler:function(req,reply) {
-      reply.view("createpost.html");
-    }
+
+    handler:require("./handlers/getcreatepost")
   },
 
 
@@ -55,7 +54,7 @@ module.exports = [
 
 {
   method:"GET",
-  path:"/assets/{param*}",
+  path:"/build/{param*}",
   handler:{
     directory:{
       path:"src/"

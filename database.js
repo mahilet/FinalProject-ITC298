@@ -21,9 +21,8 @@ var usersDb = {
         function(next) {
           console.log("creating user database", db);
           db.run("CREATE TABLE IF NOT EXISTS users (username, bio, website, password);", function(err) {
-            console.log(err, "users TABLE is created");
-           db.run("DELETE FROM blogposts");
-          db.run("DELETE FROM users ");
+            console.log(err, "users TABLE is created");            
+            db.run("DELETE FROM users ");
 
           },next);
         },
@@ -35,6 +34,7 @@ var usersDb = {
        
           db.run("CREATE TABLE IF NOT EXISTS blogposts (date, comment, topic );", function (err) {
             console.log(err, "blogposts is created");
+            db.run("DELETE FROM blogposts");
 
           }, next);
         }
@@ -63,7 +63,7 @@ var usersDb = {
       $timestamp:namePost.timestamp
     });
   },
-  get: function(username, callback) {
+  checkPasword: function(username, callback) {
     this.connection.get("SELECT * FROM users WHERE username = $username", {
       $username : username
     }, callback);

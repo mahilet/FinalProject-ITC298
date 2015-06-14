@@ -5,7 +5,7 @@ var moment = require('moment');
 
 
 var  SAVE_NEW = "INSERT INTO blogposts (date, topic, comment, timestamp) VALUES ($date,$topic, $comment, $timestamp);";
-
+var UPDATE = "UPDATE blogposts SET date = $DATE, topic = $topic, comment = $comment WHERE topic = $topic;";
 
 
   var BlogPost = Backbone.Model.extend({
@@ -15,6 +15,21 @@ var  SAVE_NEW = "INSERT INTO blogposts (date, topic, comment, timestamp) VALUES 
     topic: "",
     comment: "",
     id: "new"
+  },
+
+  // whe done, call the callback
+  load: function(done) {
+    var self = this;
+    // run an INSERT on the database
+    var query = db.connection.prepare(LOAD);
+     // get its own data
+    var data = this.toJSON();
+    query.get({
+      $id: data.id
+    }, function(err, loaded) {
+      self.set(loaded);
+      done(err);
+    });
   },
 
 
