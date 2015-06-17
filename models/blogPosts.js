@@ -2,11 +2,8 @@ var Backbone = require("backbone");
 var db = require("../database");
 var moment = require('moment');
 
-
-
 var  SAVE_NEW = "INSERT INTO blogposts (date, topic, comment, timestamp) VALUES ($date,$topic, $comment, $timestamp);";
 var UPDATE = "UPDATE blogposts SET date = $DATE, topic = $topic, comment = $comment WHERE topic = $topic;";
-
 
   var BlogPost = Backbone.Model.extend({
 
@@ -47,13 +44,12 @@ var UPDATE = "UPDATE blogposts SET date = $DATE, topic = $topic, comment = $comm
 
     query.run({
 
-
-      $topic: data.topic,
-      $comment: data.comment,
-      $date: moment().format("MMMM Do YY"),
-      $timestamp: moment().format("x"),
-      // $date: Date.now(),
-      $id: id == "new" ? undefined : data.id
+        $topic: data.topic,
+        $comment: data.comment,
+        $date: moment().format("MMMM Do YY"),
+        $timestamp: moment().format("x"),
+        // $date: Date.now(),
+        $id: id == "new" ? undefined : data.id
 
     }, done);
   }

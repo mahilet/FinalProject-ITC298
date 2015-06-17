@@ -57,9 +57,22 @@ module.exports = [
   path:"/build/{param*}",
   handler:{
     directory:{
-      path:"src/"
-
+      path:"build/"
 
     }
   }
+
+
+},
+
+{
+  method:"GET",
+  path:"/assets/{param*}",
+  handler:{
+    directory:{
+      path:"src/"
+
+    }
+  }
+
 }];

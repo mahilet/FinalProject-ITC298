@@ -10,15 +10,15 @@ server.connection({port:8000});
 
 
 db.init(function(err) {
-  console.log("Database ready, starting server...");
-  if (err) {
-    return console.error(err);
-  }
+    console.log("Database ready, starting server...");
+    if (err) {
+      return console.error(err);
+    }
 
-  server.start(function() {
-    console.log("Server ready!");
-     
-  });
+    server.start(function() {
+      console.log("Server ready!");
+       
+    });
 });
 
 

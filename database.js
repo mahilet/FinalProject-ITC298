@@ -39,7 +39,7 @@ var usersDb = {
           }, next);
         }
       ], function(err, result) {
-          db.all("SELECT * FROM users", console.log.bind(console));
+          db.all("SELECT * FROM users");
         console.log(err);
         console.log("done setting up db")
         if (ready) ready(err);

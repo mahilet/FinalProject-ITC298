@@ -1,22 +1,15 @@
 //createpost handler
 var db = require("../database");
 
-
-
-
 module.exports = function(req, reply){
   
-      // console.log(req.payload.user);
-      // console.log(req.payload.password);
-      // console.log("MANGOS ARE GOOD!");
-
       var message = "Try Again!!!";
 
       var user = db.checkPasword(req.payload.user, function(err, result) {
           console.log(err, result, req.payload.password);
           // set cookie on response, get cookie on request
           if(result && req.payload.password == result.password) {
-                var response = reply.redirect("/");
+                var response = reply.redirect("/createpost");
                 var id = Date.now();
 
                 response.state("user", req.payload.user);

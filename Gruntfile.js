@@ -25,10 +25,6 @@
 
 module.exports = function(grunt) {
 
-
-
-
-
   grunt.registerTask("default",["autoprefixer","nodemon"]);
 
   grunt.loadNpmTasks("grunt-autoprefixer");
@@ -40,7 +36,6 @@ module.exports = function(grunt) {
   //jshint should help with debugging
   //enable with 'grunt jshint' in command window until
   // it is part of 'concurrent'
-
 
   // aways 3 levels deep--dev is the target
   //add keys for each of theiese
