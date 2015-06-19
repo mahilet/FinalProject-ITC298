@@ -13,9 +13,11 @@ body {
 #multi-posts{
   clear:both;
   background: antiquewhite;
-
+  padding:40px;
+  border-radius: 5px;
   color:black;
   margin:auto;
+  padding:40px;
 
 }
 .error{
@@ -26,6 +28,17 @@ p {
   color:blue;
   padding: 8px;
 }
+.warn{
+
+  color:red;
+  border:2px solid red;
+  border-radius: 5px;
+  display:inline-block;
+  padding:10px;
+}
+li{
+  list-style: none;
+}
 
 section p {
   color:blue;
@@ -34,29 +47,34 @@ section p {
 nav {
   /*background: yellow;*/
 }
-ul{
-  text-decoration: none;
-  list-style: none;
 
-}
 nav ul {
-  width:100%;
+  background:#89A767;/*greencol*/
   border: 1px solid black;
   border-radius: 5px;
-
-
 }
 
 nav  li {
     display: inline-block;
-    width: 15%;
-    padding:0 0 20px 20px;
-    background: white;
+    width: 22%;
+    display:inline-block;
+    padding:25px 0 25px 0;
     text-align: center;
+
+}
+nav  li a:hover{
+    background: #deb520;/*yellowcol*/
+    display:block;
+
 }
 
-nav  li {
-    font-size: 24px;
+nav  li a {
+      font-size: 24px;
+      color:#E8A962;/*roangecol*/
+      color:#f2e1a5;/*yellowcol*/
+      text-decoration: none;
+
+
 }
 
 .text-box {
@@ -83,6 +101,53 @@ nav  li {
   border-radius: 5px;
   margin-bottom:15px;
   background:white;
-
-
+}
+.but{
+  border-radius:5px;
+  height:75px;
+  background-color:lightblue;
+  font-size: 22px;
+}
+h2{
+  color:#89A767;
+}
+h1 {
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 26.3999996185303px;
+}
+h3 {
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.3999996185303px;
+}
+p {
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714282989502px;
 }

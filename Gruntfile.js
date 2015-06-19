@@ -37,7 +37,7 @@ module.exports = function(grunt) {
   //enable with 'grunt jshint' in command window until
   // it is part of 'concurrent'
 
-  // aways 3 levels deep--dev is the target
+  // aways 3 levels deep--dev is the 'target'
   //add keys for each of theiese
   grunt.initConfig({
 
@@ -51,6 +51,8 @@ module.exports = function(grunt) {
 
           }
         },
+
+        
 
     nodemon: {
       dev: {

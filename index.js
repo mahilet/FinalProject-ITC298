@@ -17,7 +17,7 @@ db.init(function(err) {
 
     server.start(function() {
       console.log("Server ready!");
-       
+
     });
 });
 
