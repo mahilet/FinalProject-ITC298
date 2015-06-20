@@ -10,7 +10,7 @@ var usersDb = {
     var db = usersDb.connection = new sqlite.Database("database.db", function(err) {
 
       if (err) {
-        mango
+        
         console.error("Database not opened");
         process.exit(1);
       }

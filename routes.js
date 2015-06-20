@@ -7,17 +7,17 @@ module.exports = [
   },
   //  this is a list of   users biographies
 {
-  method: "GET",
-  path:"/bios",
-  handler:require("./handlers/bios")
-  
+    method: "GET",
+    path:"/bios",
+    handler:require("./handlers/bios")
+    
 },
 
 
 {
-  method:"GET",
-  path: "/bios/bio/{index}",
-  handler:require("./handlers/bios")
+    method:"GET",
+    path: "/bios/bio/{index}",
+    handler:require("./handlers/bios")
 },
 
 {
@@ -53,11 +53,11 @@ module.exports = [
 
 
 {
-  method:"GET",
-  path:"/build/{param*}",
-  handler:{
+    method:"GET",
+    path:"/build/{param*}",
+    handler:{
     directory:{
-      path:"build/"
+    path:"build/"
 
     }
   }
@@ -66,11 +66,11 @@ module.exports = [
 },
 
 {
-  method:"GET",
-  path:"/assets/{param*}",
-  handler:{
+    method:"GET",
+    path:"/assets/{param*}",
+    handler:{
     directory:{
-      path:"src/"
+    path:"src/"
 
     }
   }

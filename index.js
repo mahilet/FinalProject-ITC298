@@ -5,7 +5,10 @@ var hapi = require("hapi");
 var server = new hapi.Server();
 
 var db = require("./database");
-server.connection({port:8000});
+server.connection({
+    port:8000
+
+});
 
 
 
@@ -22,20 +25,17 @@ db.init(function(err) {
 });
 
 
-
-
-
 server.views({
-  path: "views/templates",
-  layoutPath: "views",
-  layout: "default",
-  engines: {
-    html: require("handlebars")
-  },
-  isCached: false,
-  context: {
-    dev: true
-  }
+    path: "views/templates",
+    layoutPath: "views",
+    layout: "default",
+    engines: {
+      html: require("handlebars")
+    },
+    isCached: false,
+    context: {
+      dev: true
+    }
 });
 
 

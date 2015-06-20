@@ -1,12 +1,52 @@
 
- <h2>THIS IS MY LIST PAGE for BLOG POSTS</h2>
+ <h2>THIS IS MY LIST PAGE for BLOG POSTs</h2>
 <ul >
-    {{#each blogs}}
-    <li><a href="bios/bio/{{@index}}"></a></li>
-    <li><h3> {{date}},  <img src="{{topic}}" class="icon">says:</li>
-     <li class = "single"><p>{{comment}}</li>
+ {{#each blogs}}
+        <li><a href="bios/bio/{{@index}}"></a></li>
+        <li><h3> {{date}},  <img src="{{topic}}" class="icon">says:</li>
+         <li class = "single" name ="small"><p>{{small}}</p></li>
+         <li class = "single" name ="full"><p>{{comment}}</p></li>
+        <input type="submit" class = "moreLess" name = "more" value="Show All comment" />
+        <input type="submit" class = "moreLess" name = "less" value="Show Less comment" />
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <script>
+        // global hide and show
+                    var small = $('[name=small]');
+                    var allcomment = $('[name=full]');
+                    var show = $('[name=more]');
+                    var lessBut = $('[name=less]');
+
+                    allcomment.hide();
+                    lessBut.hide(); 
+
+                    show.on('click', wantMore);
+
+                    var wantMore = function() {
+                        small.hide();
+                        allcomment.show();
+                        show.hide();
+                        lessBut.show(); 
+                    };
+
+                    lessBut.on('click', wantLess);
+
+                    var wantLess = function() {
+                        small.show();
+                        allcomment.hide();
+                        show.show();
+                        lessBut.hide(); 
+                    };
+
+
+        </script>
+
+
 
     {{/each}}
+
 
 </ul>
 

@@ -48,7 +48,6 @@ var UPDATE = "UPDATE blogposts SET date = $DATE, topic = $topic, comment = $comm
         $comment: data.comment,
         $date: moment().format("MMMM Do YY"),
         $timestamp: moment().format("x"),
-        // $date: Date.now(),
         $id: id == "new" ? undefined : data.id
 
     }, done);
